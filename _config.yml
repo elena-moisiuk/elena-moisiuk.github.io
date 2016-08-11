@@ -1,0 +1,48 @@
+# ### Site settings ###
+
+# used in layouts and header
+url: "http://elena-moisiuk.github.io"
+
+# used with breadcrumbs
+site_name: "elena-moisiuk.github.io"
+site_lang: "ru"
+
+# main mirror location
+mirror: "" # leave it empty for main site
+
+
+# ### Build settings ###
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: false
+
+# Allow redirections
+gems:
+  - jekyll-redirect-from
+
+
+# How many news (builds) show per page
+paginate: 10
+paginate_path: "/blog/page:num/"
+#excerpt_separator: "\n---\n"
+excerpt_separator: ""
+
+# ### Page defaults ###
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      isroot: true
+      layout: "root"
+      title: "Елена Мойсюк - Портфолио"
+      site_label: "Портфолио"
+      docfolder: /
+      pagelang: ru
+      toctitle: "Назад"

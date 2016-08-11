@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://elena-moisiuk.github.io/sitemap.html

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="{{page.pagelang}}">
+<!-- page.url='{{page.url}}' -->
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% if page.noindex == true %}<meta name="robots" content="noindex">{% endif %}
+
+<meta name="author" content="@Elena-Moisiuk">
+
+<!--
+This page was saved from: {{site.url}}{{page.url}}
+-->
+
+<!--<link rel="stylesheet" href="/normalize.css">-->
+<link rel="stylesheet" href="/main.css">
+
+<title>{{page.title}}</title>
+{% if page.description != '' and page.description != nil %}<meta name="description" content="{{page.description}}">{% endif %}
+
+<meta property="og:url" content="{{page.canonical_url}}">
+<meta property="og:title" content="{{page.title}}">{% if page.description != '' and page.description != nil %}
+<meta property="og:description" content="{{page.description}}">{% endif %}{% if page.og_image != '' and page.og_image != nil %}
+<meta property="og:image" content="{{page.og_image}}">{% endif %}
+
+<!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="maincol">
+
+{% include header.html %}
+
+	<div class="middle">
+
+		<div class="container">
+			<div class="content">
+
+<article>
+
+{% if page.force_header or (page.h1_title != nil and page.h1_title != '') %}
+	<h1>{% if page.h1_title %}{{ page.h1_title }}{% else %}{{ page.title }}{% endif %}</h1>{% if page.h1_content != '' and page.h1_content != nil %}
+	<p>{{ page.h1_content }}</p>{% endif %}
+{% endif %}
+
+{{ content }}
+
+</article>
+
+			</div><!-- .content-->
+		</div><!-- .container-->
+
+		<div class="left-sidebar">
+{% include menu_ru.html %}
+		</div>
+	</div><!-- .middle-->
+
+</div><!-- .maincol -->
+</div><!-- .wrapper -->
+
+{% include copyright.html %}
+
+</body>
+</html>

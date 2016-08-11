@@ -1,0 +1,26 @@
+---
+title: SiteMap
+description: List of all website pages
+noindex: true
+---
+
+{% comment %} ‘UTF-8’ {% endcomment %}
+
+<h1>List of all website pages</h1>
+
+<table>
+
+<tr>
+  <th> URL </th>
+  <th> Lang </th>
+  <th> Description </th>
+</tr>
+
+{% for p in site.pages %}
+<tr>
+  <td> <a href="{{ p.url }}" title="{{ p.title }}"> {{ p.url }} </a> </td>
+  <td> {{ p.pagelang }} </td>
+  <td> {{ p.title }} </td>
+</tr>{% endfor %}
+
+</table>

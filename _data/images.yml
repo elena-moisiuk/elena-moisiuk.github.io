@@ -1,0 +1,20 @@
+# List of works
+
+-
+  caption: "Ванная"
+  descr: "Ванная.jpg"
+  large: "/img/Ванная.jpg"
+  small: "/img/Ванная.jpg"
+  size: "800x600"
+-
+  caption: "Гостиная"
+  descr: "Гостиная.jpg"
+  large: "/img/Гостиная.jpg"
+  small: "/img/Гостиная.jpg"
+  size: "800x600"
+-
+  caption: "Квартира1"
+  descr: "Квартира1.jpg"
+  large: "/img/Квартира1.jpg"
+  small: "/img/Квартира1.jpg"
+  size: "800x600"
